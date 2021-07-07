@@ -6,22 +6,26 @@ from collections import Counter
 import re
 
 def compute_jacard(set1:list, set2:list):
+    # using collections.Counter for duplicate
     intersection = list((Counter(set1) & Counter(set2)).elements())
     union = list((Counter(set1) | Counter(set2)).elements())
 
-    jacard = 1
+    # compute jacard similarity
+    jacard = 1.0
     if len(intersection) != 0 or len(union) != 0:
         jacard = len(intersection) / len(union)
 
     return jacard
 
 if __name__ == "__main__":
+    # convert lowercase
     str1 = input().lower()
     str2 = input().lower()
 
     str1_set = []
     str2_set = []
 
+    # string parse and make set using regex
     for i in range(0, len(str1)):
         subset = str1[i:i+2]
         if re.match("[a-z]{2}", subset) and len(subset) == 2:
