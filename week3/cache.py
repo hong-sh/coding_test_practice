@@ -1,4 +1,6 @@
 '''
+https://programmers.co.kr/learn/courses/30/lessons/17680
+
 캐시크기(cacheSize)	도시이름(cities)	실행시간
 3	["Jeju", "Pangyo", "Seoul", "NewYork", "LA", "Jeju", "Pangyo", "Seoul", "NewYork", "LA"]	50
 3	["Jeju", "Pangyo", "Seoul", "Jeju", "Pangyo", "Seoul", "Jeju", "Pangyo", "Seoul"]	21
