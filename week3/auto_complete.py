@@ -8,7 +8,7 @@ https://programmers.co.kr/learn/courses/30/lessons/17685
 
 def find_count(current_node):
     count = 0
-    for _, value in current_node.items():
+    for _, value in current_node.items(): # add count
         if value[0] != 1:
             count += find_count(value[1])
         count += value[0]
@@ -18,7 +18,7 @@ def solution(words):
     answer = 0
 
     dictionaries = {}
-    for word in words:
+    for word in words: # push N tree words
         i = 0
         current_node = dictionaries
         while i < len(word):
