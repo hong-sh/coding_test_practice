@@ -4,7 +4,6 @@ https://programmers.co.kr/learn/courses/30/lessons/42891
 food_times	k	result
 [3, 1, 2]	5	1
 '''
-from queue import PriorityQueue
 
 def solution(food_times, k):
     answer = 0
