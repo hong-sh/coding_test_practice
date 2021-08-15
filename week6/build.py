@@ -22,7 +22,6 @@ def impassible_check(build_state):
 
     return False
         
-
 def solution(n, build_frame):
     answer = [[]]
 
@@ -40,7 +39,7 @@ def solution(n, build_frame):
             build_state.remove(item)
             if impassible_check(build_state):
                 build_state.add(item)
-
+ 
     build_state = map(list, build_state)
     answer = sorted(build_state, key=lambda x : (x[0], x[1], x[2]))
     return answer
@@ -74,10 +73,10 @@ def del_col_val(n, build_state, x, y):
     for build in copy_state:
         # if abs(build[0] - x) <= 1 and abs(build[1] - y) <= 1:
         if build[2] == 0:
-            if build_col_val(n, copy_state, build[0], build[1]) == False:
+            if not build_col_val(n, copy_state, build[0], build[1]):
                 return False
         elif build[2] == 1:
-            if build_row_val(n, copy_state, build[0], build[1]) == False:
+            if not build_row_val(n, copy_state, build[0], build[1]):
                 return False
     
     return valid
@@ -105,7 +104,7 @@ def del_row_val(n, build_state, x, y):
 def solution2(n, build_frame):
     answer = [[]]
 
-    build_state = set()
+    build_state = []
     for build in build_frame:
         # 0 col 1 row
         # 0 del 1 build
