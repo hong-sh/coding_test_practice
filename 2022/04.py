@@ -22,7 +22,7 @@ def solution(n, info):
         ryan, apeach = 0, 0
         max_ryan = -1
         for i in range(len(score_list)):
-            if score_list[i] == 0 and info[i] == 0:
+            if score_list[i] == 0 and info[i] == 0: 
                 continue
 
             if score_list[i] > info[i]:
